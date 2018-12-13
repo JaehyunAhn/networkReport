@@ -206,7 +206,7 @@ IT 기술은 인류의 커뮤니케이션 범위를 물리적 공간에서 망(n
 [9](#References)
 
 # References
-1. Granovetter의 해당 논문은 약 5만 회가 넘게 인용이 된 고전 중의 고전입니다.
+1. Granovetter의 해당 논문은 약 5만 회가 넘게 인용이 된 고전(Classic)입니다.
 2. The small world problem, http://snap.stanford.edu/class/cs224w-readings/milgram67smallworld.pdf
 3. 중심 노드를 바라보는 다양한 관점, http://www.kwangsiklee.com/2017/11/%EA%B7%B8%EB%9E%98%ED%94%84-%EC%9D%B4%EB%A1%A0-%EA%B8%B0%EC%B4%88-%EC%A0%95%EB%A6%AC/
 4. Common Network Topologies, https://en.wikibooks.org/wiki/Communication_Networks/Network_Topologies
