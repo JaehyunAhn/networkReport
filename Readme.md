@@ -3,8 +3,8 @@
 
 <p align='center'>
 ![쾨니히스베르크의 다리](http://mblogthumb2.phinf.naver.net/MjAxODA3MTNfMjk3/MDAxNTMxNDc5NTkyMTkx.iE2fwJHadMdpTBDP8ZU97UqhV3rOiqVIJE4Ug3C5R5Ug.CVxwmkOtlc8-CqIDcs_jFPDaoOre6iEsFC5VHowEYhkg.JPEG.galaxyenergy/1531479591997.jpg?type=w800)
-    [그림 1] 쾨니히스베르크의 다리건너기 문제
 </p>
+[그림 1] 쾨니히스베르크의 다리건너기 문제<br>
 
 프로이센의 쾨니히스베르크(지금의 러시아 칼리닌그라드)에는 7개의 다리가 있었습니다. 마을 사람들은 각 동네에 있는 친구들을 효율적으로 만나고 싶어했고, 이 문제는 자연스럽게 다음과 같은 문제로 변형됐습니다.
 
