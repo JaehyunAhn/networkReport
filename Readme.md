@@ -31,9 +31,9 @@
 ## 개요
 시각화된 네트워크 그래프를 해석하려면 간단한 용어를 기억해야 합니다.
 
-
-![](http://mathworld.wolfram.com/images/eps-gif/GraphNodesEdges_1000.gif)
 <p align='center'>
+<img src='http://mathworld.wolfram.com/images/eps-gif/GraphNodesEdges_1000.gif'>
+    <br><br>
     [그림 3] 노드와 엣지를 설명하는 간단한 그래프
 </p>
 
