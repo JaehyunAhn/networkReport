@@ -1,4 +1,10 @@
 # 네트워크 리포트: 해설편
+
+<p align='right'>
+    지은이: 안재현(Jaehyun Ahn)<br>
+    [sogosonnet@gmail.com](mailto:sogosonnet@gmail.com)
+</p>
+
 네트워크 위상학(Network Toplogy 또는 Graph Theory)은 망의 관계와 부하를 설명하기에 훌륭한 도구입니다. 위상학이라고 덥석 용어를 던지니 왠지모를 벽이 느껴지는 듯 합니다. 복잡해보이는 이 학문은 실은 간단한 문제에서 시작됐습니다.
 
 <p align='center'>
@@ -135,7 +141,7 @@ IT 기술은 인류의 커뮤니케이션 범위를 물리적 공간에서 망(n
 
 각 네트워크 유형들은 어떤 것이 최상이다, 이상적이라고 할 것이 없습니다. 그래프의 형태마다 쓰임새가 다르고, 장점/단점이 다르기 때문입니다. 따라서 시스템을 구성하기 앞서 과업의 특성을 파악하고 해당 과업을 효율적으로 수행할 수 있는 형태로 그래프를 구성해야 할 것입니다. 
 
-따라서 그래프 분석은 **특정 그래프의 맹목적인 추구**가 아니라, 1) 현재 데이터 플로우 그래프가 어떤 형태를 취하고 있는가와 2) 시간이 흐름에 따라 어떤 형태로 변하고 있는가 하는 현상을 파악하고, 3) 그래프가 해당 시스템이 마주한 미션을 해결하는데 적합한 방식으로 움직이고 있는지 마지막으로 3) 다른 그래프의 장점/단점이 현재 겪고 있는 문제보다 **덜 고통스러운가**를 천천히 비교하며 접근해야 할 것입니다. 현재 시스템이 형성된 형상은 외부 자극이 없다는 전제 아래 **자연스러운 것**이기 때문에, 외부 자극이 주어졌을 때 영향을 미칠 수 있는 사이드 이펙트 버퍼까지 계산을 두고 변화를 고려해야 합니다.
+따라서 그래프 분석은 **특정 그래프의 맹목적인 추구가 아니**라, 1) 현재 데이터 플로우 그래프가 어떤 형태를 취하고 있는가와 2) 시간이 흐름에 따라 어떤 형태로 변하고 있는가 하는 현상을 파악하고, 3) 그래프가 해당 시스템이 마주한 미션을 해결하는데 적합한 방식으로 움직이고 있는지 마지막으로 3) 다른 그래프의 장점/단점이 현재 겪고 있는 문제보다 **덜 고통스러운가**를 천천히 비교하며 접근해야 할 것입니다. 현재 시스템이 형성된 형상은 외부 자극이 없다는 전제 아래 **자연스러운 것**이기 때문에, 외부 자극이 주어졌을 때 영향을 미칠 수 있는 사이드 이펙트 버퍼까지 계산을 두고 변화를 고려해야 합니다.
 
 ## 거리분석
 
@@ -161,22 +167,44 @@ IT 기술은 인류의 커뮤니케이션 범위를 물리적 공간에서 망(n
 
 ## 그래프 이론
 아래서부터는 결과 분석에 초점보다는 일반적인 그래프 해석에 대한 기본 이론을 다룹니다. 그래프 이론에 대한 지식 습득에 의욕이 없으신분들은 흥미가 급격하게 떨어질 수 있습니다.
-### 클러스터
 ### 허브(centrality)
+허브는 인-디그리(In-degree)가 많은 노드를 특정하여 지칭합니다. 인-디그리가 높다는 것은 상대적인 것이며, 그래프 전체에서 인-디그리 편차를 계산하여 인-디그리가 특정 수준 상위를 차지하는 노드를 허브라고 할 수 있습니다.
+### 클러스터(Cluster)
+클러스터(Cluster, 군체(群體))는 허브를 중심으로 디그리가 낮은 이웃들이 만드는 부분 그래프입니다.
+
+<p align='center'>
+    <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Equivalentie.svg/330px-Equivalentie.svg.png'>
+    <br>
+    [그림 13] 서로 다른 영역으로 구분된 그래프
+</p>
+
+클러스터는 서로 다른 영역으로 굳이 구분되지 않아도 구성이 가능하며, 서로 다른 클러스터간 **연결이 약해지는 부분**을 경계삼아 형성되기도 합니다.
+
 ### 중심 노드(Centrality Node)를 바라보는 다양한 관점
-[3](#References)
-### 흔한 네트워크 토폴로지(Common Network Topologies)
 
-<img src='https://upload.wikimedia.org/wikipedia/commons/9/96/NetworkTopologies.png'>
+> 그래프에서 핵심 노드는 어디인가
 
-[4](#References)
+다음 문제는 망 이론이 발달하기 전, 분해적 관점(물체를 더 이상 쪼갤 수 없을 때까지 분해하여 이해한 다음, 모두 받아들이면 대상을 전부 이해할 수 있을 것이라는 관점)에서 그래프를 분석하려는 시도에서 등장했습니다. 이 이론에 따르면 중심노드는 인-디그리가 가장 큰 허브(hub)가 될 수도 있고, 모든 노드간 이동 거리가 가장 짧은 노드(Closness)가 중심 노드가 되기도 하며, 한 그래프가 다른 그래프로 끊어지지 않게 붙들고 있는 노드(Betweeness)가 중요하다고 보는 시각이 있습니다. [3](#References)
 
-## 알고리즘
-### 시각화 방식
-#### 배치
-https://en.wikipedia.org/wiki/Force-directed_graph_drawing
-#### 색
-https://matplotlib.org/examples/color/colormaps_reference.html
+중심노드의 중요성은 네트워크의 역할에 따라 달라질 것으로 파악되며, 견고성과 속도, 처리능력(throughput)에 따라서 중요한 노드를 선별하는 방식은 달라질 수 있습니다.
+
+### 흔한 네트워크 토폴로지 Common Network Topologies
+
+네트워크의 형태는 다양하지만 일반적으로 나타나는 형태들이 있습니다. [그림 14]는 네트워크 분석에서 흔히 보여지는 패턴을 정리한 것입니다.[4](#References)
+
+<p align='center'>
+    <img src='https://upload.wikimedia.org/wikipedia/commons/9/96/NetworkTopologies.png'>
+    <br>
+    [그림 14] 네트워크 모양에 따라 달라지는 명칭
+</p>
+
+## 시각화 알고리즘
+데이터를 다루어 정리하는 과정은 효율적인 그래피컬 테크닉(Graphical Technique, 시각화)을 사용하는 것을 포함합니다. 본문에서는 *특정 프로젝트*를 수행하는데 사용한 시각화 방식에 대하여 설명합니다. 특정 프로젝트는 프로젝트 특성상 일반 공개가 어렵습니다. 읽는 분들의 너른 양해를 구합니다.
+### 배치
+[8](#References) https://en.wikipedia.org/wiki/Force-directed_graph_drawing
+### 색
+[9](#References)
+
 # References
 1. Granovetter의 해당 논문은 약 5만 회가 넘게 인용이 된 고전 중의 고전입니다.
 2. The small world problem, http://snap.stanford.edu/class/cs224w-readings/milgram67smallworld.pdf
@@ -185,5 +213,6 @@ https://matplotlib.org/examples/color/colormaps_reference.html
 5. 네트워크 그래프 라이브러리. https://networkx.github.io/
 6. 슬랙 API, https://api.slack.com/
 7. gevent 비동기 라이브러리, https://pypi.org/project/gevent/
-8. 컬러맵 시각화, https://matplotlib.org/examples/color/colormaps_reference.html
-9. <링크>, A.L. 바라바시
+8. 노드 배치 방법, https://en.wikipedia.org/wiki/Force-directed_graph_drawing
+9. 컬러맵 시각화, https://matplotlib.org/examples/color/colormaps_reference.html
+10. 도서: <링크(Linked)>, A.L. 바라바시
