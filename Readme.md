@@ -1,10 +1,10 @@
 # 네트워크 리포트 해석
 네트워크 위상학(Network Toplogy 또는 Graph Theory)은 망의 관계와 부하를 설명하기에 훌륭한 도구입니다. 위상학이라고 덥석 용어를 던지니 왠지모를 벽이 느껴지는 듯 합니다. 복잡해보이는 이 학문은 실은 간단한 문제에서 시작됐습니다.
 
-<p align='center'>
 ![쾨니히스베르크의 다리](http://mblogthumb2.phinf.naver.net/MjAxODA3MTNfMjk3/MDAxNTMxNDc5NTkyMTkx.iE2fwJHadMdpTBDP8ZU97UqhV3rOiqVIJE4Ug3C5R5Ug.CVxwmkOtlc8-CqIDcs_jFPDaoOre6iEsFC5VHowEYhkg.JPEG.galaxyenergy/1531479591997.jpg?type=w800)
-</p>
-[그림 1] 쾨니히스베르크의 다리건너기 문제<br>
+<p align='center'>
+[그림 1] 쾨니히스베르크의 다리건너기 문제
+    </p>
 
 프로이센의 쾨니히스베르크(지금의 러시아 칼리닌그라드)에는 7개의 다리가 있었습니다. 마을 사람들은 각 동네에 있는 친구들을 효율적으로 만나고 싶어했고, 이 문제는 자연스럽게 다음과 같은 문제로 변형됐습니다.
 
@@ -14,9 +14,10 @@
 
 **우리는 모두 지구상의 점**이라는 이야기를 들어보셨을지 모르겠습니다. 여기서 점은 다른 점과 관계가 맺어지는가 하면, 끊어지기도 합니다. 이를 그림으로 표현하면 점과 선으로 된 어떤 형태가 드러납니다. 우리는 이것을 흔하게 *관계도*라고 부릅니다.
 
-<p align='center'>
+
 ![아내의 유혹 관계도](http://cfs12.tistory.com/image/17/tistory/2009/02/03/22/14/4988433ad5368)
-    [그림 2] 아내의 유혹 관계도
+<p align='center'>
+[그림 2] 아내의 유혹 관계도
 </p>
 
 관계는 일방적일수도, 쌍방일 수도 있습니다. 또한 관계는 긍정적일 수도 있고, 부정적일 수도 있습니다. 컴퓨터는 관계가 *긍정인지, 또는 부정인지* 판단하기 어려워합니다. 컴퓨터는 그저 대화가 누구로부터 시작됐으며, 누구를 호출하고 있으며, 호출당한 상대는 어떤 말을 했는지 저장하고 있을 뿐 입니다.
@@ -30,9 +31,9 @@
 ## 개요
 시각화된 네트워크 그래프를 해석하려면 간단한 용어를 기억해야 합니다.
 
-<p align='center'>
+
 ![](http://mathworld.wolfram.com/images/eps-gif/GraphNodesEdges_1000.gif)
-    <br><br>
+<p align='center'>
     [그림 3] 노드와 엣지를 설명하는 간단한 그래프
 </p>
 
@@ -51,27 +52,25 @@
 ## 대화분석
 대화는 빠르게 흘러갑니다. 대화를 놓치지 않기 위해서 우리는 <font style='color:red'>@</font> 라는 태그를 달아 상대방에게 알림을 보내기도 합니다.
 
-<p align='center'>
+
 ![](assets/태그.png)
-    <br>
+<p align='center'>
     [그림 4] 태그를 달아 대화를 전달합니다
 </p>
 
 이렇게 놓치지 않는 대화가 생깁니다. 이때 대화는 <font style='color:skyblue'>@JaehyunAhn</font>으로 부터 시작되어 <font style='color:skyblue'>@대상</font>에게 전해집니다. 이 대화를 그래프의 관점에서 해석한다면 노드는 <font style='color:skyblue'>@JaehyunAhn</font>과 <font style='color:skyblue'>@대상</font>이고, 엣지는 <font style='color:skyblue'>@JaehyunAhn</font>으로 부터 <font style='color:skyblue'>@대상</font>에게 뻗는 방향이 있는 선이 될 것입니다.
 
 
-<p align='center'>
 ![](assets/대화.png)
-    <br>
+<p align='center'>
     [그림 5] @JaehyunAhn 이 @대상을 태그하여 대화한 관계를 그래프로 표현
 </p>
 
 이제 <font style='color:skyblue'>@대상</font>이 <font style='color:skyblue'>@JaehyunAhn</font> 뿐만 아니라 여러 사람으로부터 호출을 받았다고 가정해봅시다. 노드 입장에서 호출을 받은 횟수를 그래프 이론 용어로 인-디그리(in-degree)라고 하며, 호출을 한 횟수를 아웃-디그리(out-degree)라고 합니다. [그림 6]
 
 
-<p align='center'>
 ![](assets/대화2.png)
-    <br>
+<p align='center'>
     [그림 6] In-degree가 2인 노드를 시각화한 그래프
 </p>
 
@@ -81,9 +80,9 @@
 ## 개인분석
 다음은 개인 대화 분석 그래프 명령 실행 결과입니다.
 
-<p align='center'>
+
 ![](assets/개인분석.png)
-    <br>
+<p align='center'>
     [그림 7] 개인분석 결과 그래프
 </p>
 
