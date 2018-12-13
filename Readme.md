@@ -1,7 +1,7 @@
 # 네트워크 리포트: 해설편
 
 <p align='right'>
-    지은이: 안재현(Jaehyun Ahn)<br>
+    안재현(Jaehyun Ahn)<br>
     <a href='mailto:sogosonnet@gmail.com' target="_blank">sogosonnet@gmail.com</a>
 </p>
 
