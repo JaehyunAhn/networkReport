@@ -2,7 +2,7 @@
 
 <p align='right'>
     지은이: 안재현(Jaehyun Ahn)<br>
-    [sogosonnet@gmail.com](mailto:sogosonnet@gmail.com)
+    <a href='mailto:sogosonnet@gmail.com' target="_blank">sogosonnet@gmail.com</a>
 </p>
 
 네트워크 위상학(Network Toplogy 또는 Graph Theory)은 망의 관계와 부하를 설명하기에 훌륭한 도구입니다. 위상학이라고 덥석 용어를 던지니 왠지모를 벽이 느껴지는 듯 합니다. 복잡해보이는 이 학문은 실은 간단한 문제에서 시작됐습니다.
