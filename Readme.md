@@ -118,7 +118,7 @@ IT 기술은 인류의 커뮤니케이션 범위를 물리적 공간에서 망(n
     중앙 집권적 그래프가 중앙 노드가 1개라면, 탈중앙 그래프에서는 중추 역할을 하는 노드가 2개 이상입니다. 탈중앙 그래프의 경우 강도에 따라 강한 탈중앙(More Decentralized), 약한 탈중앙(Less Decentralized)된 형상을 보입니다. **더와 덜**의 기준은 상대적인 것이나, 일반적으로 중추 역할을 하는 그래프의 이웃이 많으면 많을수록 강하게 탈 중앙화 된 그래프라 할 수 있습니다. [그림 10] 참조.
     
     <p align='center'>
-        <img src='assets/kisspng-computer-network-blockchain-lightning-network-dist-logical-topology-5b52612dec7ec0.6316183815321254859687.png'>
+        <img src='assets/computer-network-blockchain-lightning-network-dist-logical-topology-5b52612dec7ec0.6316183815321254859687.png'>
         <br>
         [그림 10] 그래프 모양에 따른 탈중앙화 유형 구분
     </p>
@@ -152,7 +152,7 @@ IT 기술은 인류의 커뮤니케이션 범위를 물리적 공간에서 망(n
 하는 문제는 <6단계의 분리> 문제와는 다른 형태를 보입니다. 전자의 그것은 '안다'라는 느슨한 기준을 가지고 무작위 + 기하급수적으로 엣지가 연결되는 형태라면, 후자는 시작점과 종단점이 명확히 정해진 여정이라는 것 입니다. 따라서 거리분석 여정은 시작과 동시에 끝이 날 수도, 특별한 계기가 없이는 대화가 성사되지 않을 것이라는 것을 내어 보일 수도, 어쩌면 관계가 이어지지 않은 그룹간 목표설정으로 대화 기회가 영영 없을지도 모릅니다.
 
 <p align='center'>
-    <img src='assets/kisspng-dijkstra-s-algorithm-graph-shortest-path-problem-b-gallbladder-5b39976408c885.422367481530500964036.png'>
+    <img src='assets/dijkstra-s-algorithm-graph-shortest-path-problem-b-gallbladder-5b39976408c885.422367481530500964036.png'>
     <br>
     [그림 12] 그래프, 거리분석에서 A와 E를 잇는 가장 짧은 길은 A->B->E 이다. 그렇지만 E에서 A로 가는 길은 존재하지 않음.
 </p>
