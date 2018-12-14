@@ -253,3 +253,5 @@ Wistia의 색 지도가 0-1 scale로 채도가 달라지는 것이 디그리의 
 8. 노드 배치 방법, https://en.wikipedia.org/wiki/Force-directed_graph_drawing
 9. 컬러맵 시각화, https://matplotlib.org/examples/color/colormaps_reference.html
 10. 도서: <링크(Linked)>, A.L. 바라바시
+
+이 외에도 그래프 이론에 대하여 찾아보고 싶으시다면 [Reinhard Diestiel 교수의 Graph Theory](http://diestel-graph-theory.com/)를 추천합니다.
