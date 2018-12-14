@@ -201,9 +201,46 @@ IT 기술은 인류의 커뮤니케이션 범위를 물리적 공간에서 망(n
 ## 시각화 알고리즘
 데이터를 다루어 정리하는 과정은 효율적인 그래피컬 테크닉(Graphical Technique, 시각화)을 사용하는 것을 포함합니다. 본문에서는 *특정 프로젝트*를 수행하는데 사용한 시각화 방식에 대하여 설명합니다. 프로젝트는 특성상 공개가 어렵습니다. 읽는 분들의 너른 양해를 구합니다.
 ### 배치
-[8](#References) https://en.wikipedia.org/wiki/Force-directed_graph_drawing
+#### Force-directed graph drawing
+> 해당 배치는 다음 레퍼런스([8](#References))의 설명을 참고했습니다.
+
+<p align='center'>
+    <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/SocialNetworkAnalysis.png/375px-SocialNetworkAnalysis.png'>
+    <br>
+    [그림 15] Forced-directed graph drawing 기법으로 시각화한 노드
+</p>
+
+두 노드는 훅의 법칙(Hook's law)에 따라 서로를 끌어당기고, 반대로 나머지 노드들은 쿨롱의 법칙(Coulomb's law)에 의해 산개되는 방식입니다. 이 방식은 매 회(iteration)마다 갱신되며 두 노드간 스프링의 인력과 전자기장의 척력이 평형상태가 될때까지 반복됩니다. 척력은 원이나 아크 형태를 취하면서 평형 상테를 이룹니다.
+
+##### 장점
+1. 노드가 겹치지 않게 잘 흩뿌려줍니다.
+2. 간단한 알고리즘을 사용하며 직관적입니다.
+3. 강한 이론적 근거가 있습니다. (훅의 법칙과 쿨롱의 법칙)
+
+##### 단점
+1. 오랜 러닝 타임
+2. 지엽적 최적화(local minima)에 빠지기 쉽습니다.
+
 ### 색
-[9](#References)
+인-디그리의 정도에 따라 노드 사이즈를 키우는 것 외에도 컬러 맵을 적용하여 직관적으로 디그리의 차등을 파악할 수 있게 합니다. 색 지도(color map)는 matplotlib을 사용했습니다. [9](#References)
+
+#### 개인분석
+
+<p align='center'>
+    <img src='https://matplotlib.org/_images/colormaps_reference_04.png'>
+    <br>[그림 16] matplotlib의 colormap 중 Qualitative colormaps
+</p>
+
+개인분석은 노드가 많지 않기에 linear 색 지도 기법이 적용되어도 그 차이를 눈으로 파악하기 어렵습니다. 따라서 개인분석에는 개별적 색 지도(discrete color map)인 Qualitative colormap, 그중에서도 Pastel을 사용했습니다.
+
+#### 전체분석
+
+<p align='center'>
+    <img src='https://matplotlib.org/_images/colormaps_reference_02.png'>
+    <br>[그림 17] matplotlib의 colormap 중 Sequential colormaps
+</p>
+
+Wistia의 색 지도가 0-1 scale로 채도가 달라지는 것이 디그리의 수(단위: integer, x > 0)와 적합하다고 판단되어 Wistia 컬러맵을 사용했습니다.
 
 # References
 1. Granovetter의 해당 논문은 약 5만 회가 넘게 인용이 된 고전(Classic)입니다.
